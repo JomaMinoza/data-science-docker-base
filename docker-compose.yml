@@ -1,0 +1,37 @@
+version: '3'
+
+services:
+
+  # Service for running Jupyter notebooks or any other experiments related to data science
+  experiments:
+    build:
+      # Path to the Dockerfile for the base image containing all data science packages
+      context: ./app/data-science-docker-base
+    environment:
+      # Ensures that the home directory of the user is owned by the container user
+      CHOWN_HOME: "yes" 
+      # Specifies options for changing ownership recursively
+      CHOWN_HOME_OPTS: "-R"
+    ports:
+      # Maps port 8888 inside the container (for Jupyter) to port 5000 on the host
+      - "5000:8888"
+    volumes:
+      # Mounts the current directory to the work directory inside the container
+      - ./:/home/jovyan/work
+    # Specifies the working directory inside the container
+    working_dir: /home/jovyan/work
+
+  # Doccano is an open-source text annotation tool for human labeling tasks
+  annotator:
+    image: doccano/doccano
+    container_name: annotator
+    environment:
+       # Sets the admin username for Doccano's web interface
+       ADMIN_USERNAME: "admin"
+       # Sets the admin password for Doccano's web interface
+       ADMIN_PASSWORD: "password"
+       # Sets the admin email for Doccano notifications
+       ADMIN_EMAIL: "admin@example.com"
+    ports:
+        # Maps port 8888 inside the Doccano container to port 8888 on the host for access to the UI
+        - "8888:8888"
