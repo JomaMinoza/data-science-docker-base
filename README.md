@@ -64,6 +64,6 @@ Once the containers are running, Jupyter Notebook will be available in your brow
 
 To stop the running containers, press CTRL+C in the terminal where the containers are running or use:
 
-    ```bash
-    docker-compose down
-    ```
+  ```bash
+  docker-compose down
+  ```
