@@ -32,7 +32,7 @@ Before you begin, ensure you have the following installed on your local machine:
    ```bash
    git clone https://github.com/jomaminoza/data-science-docker-base.git
    cd data-science-docker-base
-  ```
+   ```
 
 2.  Build the Docker containers using docker-compose:
 
@@ -54,7 +54,7 @@ Before you begin, ensure you have the following installed on your local machine:
     http://localhost:5000
     ```
 
-(The default port and URL may vary depending on your configuration.)
+    (The default port and URL may vary depending on your configuration.)
 
 ### Accessing the Jupyter Notebook
 
