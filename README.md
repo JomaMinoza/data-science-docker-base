@@ -6,12 +6,12 @@ This repository provides Docker Compose configurations and pre-built Docker imag
 
 - **Pre-configured Docker Compose** setup for easy environment management.
 - **Comprehensive toolset**: Packages for:
-  - Visualization (e.g., Matplotlib, Seaborn, Plotly)
-  - Data processing (e.g., Pandas, NumPy, Dask)
-  - NLP (e.g., SpaCy, NLTK, Hugging Face Transformers)
-  - Computer Vision (e.g., OpenCV, scikit-image, Pillow)
-  - Time series (e.g., statsmodels, Prophet)
-  - Geospatial (e.g., Geopandas, Rasterio)
+  - Visualization 
+  - Data processing
+  - Natural Language Processing
+  - Computer Vision 
+  - Time series 
+  - Geospatial
 - **Doccano integration** for easy annotation of text, images, and more.
 - Ready-to-use Docker images for Jupyter Notebook and other data science tools.
 
