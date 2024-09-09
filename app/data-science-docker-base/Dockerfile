@@ -178,6 +178,7 @@ RUN python3 -m spacy download en_core_web_trf
 # Install geospatial libraries
 
 RUN pip install --user \
+    --extra-index-url 'https://artifactory.vgt.vito.be/artifactory/api/pypi/python-packages/simple' \
     'networkx' \
     'rtree' \
     'geoindex-rs' \
@@ -208,13 +209,15 @@ RUN pip install --user \
     'shapely' \
     'fiona' \
     'copernicusmarine' \
+    'cdsapi' \
+    'terracatalogueclient' \
     'blue-geo' \
     'hestia-earth-earth-engine' \
     'geemap' \
     'earthengine-api' \
     'xee' \
     'movingpandas'
-
+    
 # Install audio processing libraries
 
 RUN pip install --user \
