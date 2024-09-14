@@ -1,5 +1,4 @@
-# Start from the Jupyter SciPy notebook base image with a specific sha256 digest for reproducibility
-FROM jupyter/scipy-notebook:latest@sha256:fca4bcc9cbd49d9a15e0e4df6c666adf17776c950da9fa94a4f0a045d5c4ad33 
+FROM jupyter/scipy-notebook:x86_64-python-3.11.6
 
 # Enable sudo for the default user (jovyan) inside the container
 ENV GRANT_SUDO yes
@@ -97,6 +96,34 @@ RUN pip install --user \
     'pytorch_lightning' \
     'torch-summary'
 
+# Install optimization libraries
+
+RUN pip install --user \
+    'cvxpy' \
+    'pyomo' \
+    'optuna' \
+    'hyperopt' \    
+    'deap' \
+    'pygad' \
+    'geneticalgorithm' \
+    'scikit-optimize' \
+    'GPyOpt' \
+    'bayesian-optimization' \
+    'nlopt' \
+    'pyswarm' \ 
+    'pyswarms' \
+    'simanneal' \
+    'cvxopt' \
+    'pulp' \
+    'platypus' \
+    'pymoo' \
+    'nevergrad' \
+    'cma' 
+
+# Install Hyperopt-Sklearn for hyperparameter optimization with scikit-learn
+
+RUN pip install git+https://github.com/hyperopt/hyperopt-sklearn
+
 # Install machine learning and model interpretability tools
 
 RUN pip install --user \
@@ -112,16 +139,10 @@ RUN pip install --user \
     'handcalcs' \
     'tqdm' \ 
     'wandb' \ 
-    'hyperopt' \ 
-    'bayesian-optimization' \
-    'optuna' \ 
     'jupyter_http_over_ws' \ 
     'jupyter_contrib_nbextensions' \
     'jupyter_nbextensions_configurator'
 
-# Install Hyperopt-Sklearn for hyperparameter optimization with scikit-learn
-
-RUN pip install git+https://github.com/hyperopt/hyperopt-sklearn
 
 # Install computer vision libraries
 
