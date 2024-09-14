@@ -92,7 +92,10 @@ RUN pip install --user \
     'holidays' \
     'workalendar' \
     'lunarcalendar' \
-    'thinc'
+    'thinc' \
+    'torchmetrics' \
+    'pytorch_lightning' \
+    'torch-summary'
 
 # Install machine learning and model interpretability tools
 
@@ -196,6 +199,7 @@ RUN pip install --user \
     'geopy' \
     'chord' \
     'folium' \
+    'leafmap' \
     'rasterio' \
     'netCDF4' \
     'rioxarray' \
@@ -216,7 +220,8 @@ RUN pip install --user \
     'geemap' \
     'earthengine-api' \
     'xee' \
-    'movingpandas'
+    'movingpandas' \
+    'segment-geospatial'
     
 # Install audio processing libraries
 
@@ -227,6 +232,21 @@ RUN pip install --user \
     'python_speech_features' \
     'pywavelets' \
     'audioread'
+
+# Install bioinformatics libraries
+
+RUN pip install --user \
+    'biopython' \
+    'pysam' \
+    'dendropy' \
+    'ete3' \
+    'goatools' \
+    'bcbio-gff' \
+    'pybedtools' \
+    'pyfaidx' \
+    'deeptools' \
+    'scanpy' \
+    'anndata' 
 
 # Change ownership of the home directory to the default user
 
