@@ -96,34 +96,6 @@ RUN pip install --user \
     'pytorch_lightning' \
     'torch-summary'
 
-# Install optimization libraries
-
-RUN pip install --user \
-    'cvxpy' \
-    'pyomo' \
-    'optuna' \
-    'hyperopt' \    
-    'deap' \
-    'pygad' \
-    'geneticalgorithm' \
-    'scikit-optimize' \
-    'GPyOpt' \
-    'bayesian-optimization' \
-    'nlopt' \
-    'pyswarm' \ 
-    'pyswarms' \
-    'simanneal' \
-    'cvxopt' \
-    'pulp' \
-    'platypus' \
-    'pymoo' \
-    'nevergrad' \
-    'cma' 
-
-# Install Hyperopt-Sklearn for hyperparameter optimization with scikit-learn
-
-RUN pip install git+https://github.com/hyperopt/hyperopt-sklearn
-
 # Install machine learning and model interpretability tools
 
 RUN pip install --user \
@@ -142,6 +114,32 @@ RUN pip install --user \
     'jupyter_http_over_ws' \ 
     'jupyter_contrib_nbextensions' \
     'jupyter_nbextensions_configurator'
+
+# Install optimization libraries
+
+RUN pip install --user \
+    'cvxpy' \
+    'pyomo' \
+    'optuna' \
+    'hyperopt' \    
+    'scikit-optimize' \
+    'deap' \
+    'pygad' \
+    'geneticalgorithm' \
+    'bayesian-optimization' \
+    'nlopt' \
+    'pyswarm' \ 
+    'pyswarms' \
+    'simanneal' \
+    'pulp' \
+    'platypus' \
+    'pymoo' \
+    'nevergrad' \
+    'cma' 
+
+# Install Hyperopt-Sklearn for hyperparameter optimization with scikit-learn
+
+RUN pip install git+https://github.com/hyperopt/hyperopt-sklearn
 
 
 # Install computer vision libraries
@@ -175,8 +173,6 @@ RUN pip install --user \
     'prophet' \
     'gluonts'
 
-
-
 # Install natural language processing (NLP) libraries
 
 RUN pip install --user \
@@ -202,7 +198,6 @@ RUN python3 -m spacy download en_core_web_trf
 # Install geospatial libraries
 
 RUN pip install --user \
-    --extra-index-url 'https://artifactory.vgt.vito.be/artifactory/api/pypi/python-packages/simple' \
     'networkx' \
     'rtree' \
     'geoindex-rs' \
@@ -235,7 +230,6 @@ RUN pip install --user \
     'fiona' \
     'copernicusmarine' \
     'cdsapi' \
-    'terracatalogueclient' \
     'blue-geo' \
     'hestia-earth-earth-engine' \
     'geemap' \
@@ -244,6 +238,10 @@ RUN pip install --user \
     'movingpandas' \
     'segment-geospatial'
     
+RUN pip install --user \
+    --extra-index-url 'https://artifactory.vgt.vito.be/artifactory/api/pypi/python-packages/simple' \
+    'terracatalogueclient' 
+
 # Install audio processing libraries
 
 RUN pip install --user \
@@ -252,7 +250,12 @@ RUN pip install --user \
     'soundfile' \
     'python_speech_features' \
     'pywavelets' \
-    'audioread'
+    'audioread' \
+    'pyannote.audio' \
+    'pyannote.core' \
+    'pyannote.parser' \
+    'pyannote.metrics' \
+    'pyannote.database' 
 
 # Install bioinformatics libraries
 
