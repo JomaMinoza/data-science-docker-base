@@ -236,7 +236,8 @@ RUN pip install --user \
     'earthengine-api' \
     'xee' \
     'movingpandas' \
-    'segment-geospatial'
+    'segment-geospatial' \
+    'pyGEDI'
     
 RUN pip install --user \
     --extra-index-url 'https://artifactory.vgt.vito.be/artifactory/api/pypi/python-packages/simple' \
