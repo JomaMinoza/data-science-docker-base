@@ -21,6 +21,7 @@ services:
     # Specifies the working directory inside the container
     working_dir: /home/jovyan/work
 
+
   # Doccano is an open-source text annotation tool for human labeling tasks
   annotator:
     image: doccano/doccano
@@ -34,4 +35,4 @@ services:
        ADMIN_EMAIL: "admin@example.com"
     ports:
         # Maps port 8888 inside the Doccano container to port 8888 on the host for access to the UI
-        - "8888:8888"
+        - "8000:8000"
